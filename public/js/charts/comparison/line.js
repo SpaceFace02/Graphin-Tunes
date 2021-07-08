@@ -94,5 +94,9 @@ export const lineConfig = {
         text: "Non-Studio Features",
       },
     },
+    radius: 6,
+    interaction: {
+      intersect: false,
+    },
   },
 };
