@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "start:prod": "(SET NODE_ENV=production) & nodemon app.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js ",
     "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js "
@@ -35,5 +36,8 @@
     "eslint-plugin-react": "^7.24.0",
     "parcel-bundler": "^1.12.5",
     "prettier": "^2.3.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
