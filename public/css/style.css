@@ -235,19 +235,19 @@ header .nav-bar {
   .compare-danceability {
     padding: 2rem;
     height: 50vh !important;
-    width: 100vw !important;
+    width: 90vw !important;
   }
 
   .compare-vocal {
     padding: 2rem;
     height: 50vh !important;
-    width: 100vw !important;
+    width: 90vw !important;
   }
 
   .compare-studio {
     padding: 2rem;
     height: 50vh !important;
-    width: 100vw !important;
+    width: 90vw !important;
     margin-bottom: 5rem;
   }
 
