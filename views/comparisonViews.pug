@@ -1,0 +1,24 @@
+extends base
+
+block content 
+  .compare-heading
+    .back 
+      a(href="/visualize", class="backto") Back
+
+    h1(id="compareHeading") Comparison of Various Audio Features of Recently Heard Songs!
+    h3 Visit on <span class="name">Desktop or Laptop (wider screen)</span> for a better experience and analysis.
+
+  .charts-compare
+    .compare-danceability
+      canvas(id="compareNonStudioFeatures")
+
+    .compare-vocal
+      canvas(id="vocalFeatures")
+
+    .compare-studio 
+      canvas(id="studioFeatures")
+
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js" integrity="sha512-vPeZ7JCboHcfpqSx5ZD+/jpEhS4JpXxfz9orSvAPPj0EKUVShU2tgy7XkU+oujBJKnWmu4hU7r9MMQNWPfXsYw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+  script(src="https://cdn.jsdelivr.net/npm/chart.js")
+  

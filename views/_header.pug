@@ -1,0 +1,14 @@
+#forData(data-individual = `${JSON.stringify(individualFeatures)}`, data-overall=`${JSON.stringify(overallFeatures)}`)
+
+if user
+  header
+    .nav-bar
+      nav.nav
+        a.nav_anchor(href="/visualize", class="anchor") 
+          h3 Overview
+      .header-logo
+        a(href="/")
+          img(class="logo", src="/img/mm.png" alt="Graphin' Tunes", class="anchor")
+      nav.nav
+        a.nav_anchor(href="/compare", class="anchor") 
+          h3 Comparison

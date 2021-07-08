@@ -1,0 +1,34 @@
+{
+  "extends": ["airbnb", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "off",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "spaced-comment": "off",
+    "no-console": "off",
+    "camelcase": "off",
+    // "import/newline-after-import": "off",
+    "consistent-return": "off",
+    "no-plusplus": "off",
+    "func-names": "off",
+    "object-shorthand": "off",
+    "no-process-exit": "off",
+    "no-param-reassign": "off",
+    "no-return-await": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "prefer-template": "off",
+    "prefer-destructuring": ["warn", { "object": true, "array": false }],
+    "prefer-object-spread": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "req|res|next|val|request|response|value|err|error"
+      }
+    ]
+  }
+}
