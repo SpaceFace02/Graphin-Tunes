@@ -6,7 +6,6 @@ import { shortenedLabels } from "../../charts";
 
 const lineData = {
   labels: shortenedLabels,
-  // borderColor: "rgb(230,230,230)",
   datasets: [
     {
       label: "Danceability",
