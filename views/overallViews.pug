@@ -27,22 +27,22 @@ block content
     -const liveness = overallFeatures.liveness >= 0.5 ? "enjoy" : "don't enjoy"
     -const energy = overallFeatures.energy >= 0.5 ? "are absolutely thrilled to listen to songs with energy and pump!" : "prefer songs with lesser energy"
     -const valence = overallFeatures.valence >= 0.5 ? "happy, euphoric and cheerful emotions!" : "sad and angry emotions"
-    -const instrumentalness = overallFeatures.instrumentalness >= 0.5 ? "a lot of instruments and less vocals" : "an emphasis on vocals being upfront and fewer instruments"
+    -const instrumentalness = overallFeatures.instrumentalness >= 0.5 ? "a lot of pure instruments and less vocals" : "an emphasis on vocals being upfront and fewer instruments"
     -const tempo = overallFeatures.tempo <= 110 ? "slower, downbeat and more relaxed" : "faster, upbeat and high tempo"
     -const keyNames = ["C", "C♯/D♭", "D", "D♯/E♭", "E", "F", "F♯/G♭", "G", "G♯/A♭", "A", "A♯/B♭", "B"];
 
     .overall-details 
       h1(class="analyzer-heading") Overview of your recently played songs:
       h2 In your recently played songs,
-      h3 You <span class="analyzer">#{danceability}</span> music that makes you dance. 🎼
-      h3 You <span class="analyzer">#{speechiness}</span> listen to many poems, audiobooks or podcasts. 🎙
-      h3 You <span class="analyzer">#{acousticness}</span> a lot of songs with pure acoustics or strings.  🎷
-      h3 You <span class="analyzer">#{liveness}</span> a live audience in what you listen. 🎛
-      h3 You <span class="analyzer">#{energy}</span>. 🎺
-      h3 You have listened to songs that potray <span class="analyzer">#{valence}</span>. 🥁
-      h3 You love to listen to songs with <span class="analyzer">#{instrumentalness}</span>. 🎛
-      h3 You prefer <span class="analyzer">#{tempo}</span> music.🎵
-      h3 You have listened to songs in the <span class="analyzer">#{keyNames[overallFeatures.key]}</span> octave range.🎶
+      h3 You <span class="analyzer">#{danceability}</span> music that makes you dance (Danceability) 🎼.
+      h3 You <span class="analyzer">#{speechiness}</span> listen to many poems, audiobooks or podcasts (Speechiness) 🎙.
+      h3 You <span class="analyzer">#{acousticness}</span> a lot of songs with pure acoustics or strings (Acousticness) 🎷.
+      h3 You <span class="analyzer">#{liveness}</span> a live audience in what you listen (Liveness) 🎛.
+      h3 You <span class="analyzer">#{energy}</span>(Energy) 🎺. 
+      h3 You have listened to songs that potray <span class="analyzer">#{valence}</span>.(Valence) 🥁
+      h3 You love to listen to songs with <span class="analyzer">#{instrumentalness}</span>    (Instrumentalness) 🎛.
+      h3 You prefer <span class="analyzer">#{tempo}</span> music (Tempo) 🎵 .
+      h3 You have listened to songs in the <span class="analyzer">#{keyNames[overallFeatures.key]}</span> octave range (Key / Octave) 🎶.
 
       h2(class="analyzer-heading") As I said, this app is all about you! 😁💝🎁
 

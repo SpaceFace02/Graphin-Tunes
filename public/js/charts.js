@@ -49,3 +49,13 @@ const allLabelsHandler = (array) => {
 };
 
 export const allLabels = allLabelsHandler(individualChartData);
+
+// In mobile view, the labels mess up the chart as they are sometimes too long.
+export let shortenedLabels = [];
+
+for (let i = 0; i < allLabels.length; i++) {
+  const individualLabels = allLabels[i].split(" ");
+  if (individualLabels.length > 2) {
+    shortenedLabels[i] = individualLabels;
+  }
+}

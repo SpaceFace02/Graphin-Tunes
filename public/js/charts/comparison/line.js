@@ -2,9 +2,10 @@
 
 import { allLabels } from "../../charts";
 import { individualChartData } from "../../charts";
+import { shortenedLabels } from "../../charts";
 
 const lineData = {
-  labels: allLabels,
+  labels: shortenedLabels,
   // borderColor: "rgb(230,230,230)",
   datasets: [
     {

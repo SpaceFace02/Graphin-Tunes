@@ -2,6 +2,7 @@
 
 import { allLabels } from "../../charts";
 import { individualChartData } from "../../charts";
+import { shortenedLabels } from "../../charts";
 
 const studioData = {
   labels: allLabels,

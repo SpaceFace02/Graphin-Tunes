@@ -22,7 +22,6 @@ h6 {
 
 html {
   margin: auto;
-  overflow-x: hidden;
 }
 
 .home-container {
@@ -46,22 +45,26 @@ html {
   color: gray;
   padding: 0.8rem;
   border: 0.1px solid rgba(92, 92, 92, 0.4);
-
   font-weight: bold;
   border-radius: 7px;
+  transition: 0.3s;
 }
 
 .get-started:hover {
-  background: #7f7fd5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #86a8e7de,
-    #86a8e7de,
-    #bebeffe7
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #86a8e7de, #86a8e7de, #b1b1ffea);
+  background: #7f7fd5 url("../img/pixel.png");
   color: white;
   border: 0.1px solid rgba(92, 92, 92, 0.4);
+  transition-delay: 0.3s;
+  animation: animate 0.3s steps(8) forwards;
+}
+
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -960px;
+  }
 }
 
 header .nav-bar {
@@ -88,9 +91,8 @@ header .nav-bar {
 }
 
 .welcome-msg h2 {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   font-weight: bolder;
-  border-bottom: 1px solid rgb(92, 92, 92);
   padding: 0.3rem;
 }
 
@@ -125,6 +127,10 @@ header .nav-bar {
 
 .back {
   margin: 0.3rem;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-bar a:hover,
@@ -138,7 +144,6 @@ header .nav-bar {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: 0.5px solid rgba(92, 92, 92);
 }
 
 .compare-heading h1 {
@@ -146,6 +151,8 @@ header .nav-bar {
   font-weight: bold;
   text-align: center;
   margin: 2rem 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid #7f7fd5;
 }
 
 .compare-heading h2 {
@@ -184,6 +191,7 @@ header .nav-bar {
 
   .home-container h1 {
     font-size: 2.6rem;
+    margin-top: 1rem;
   }
 
   .description h2 {
@@ -211,18 +219,23 @@ header .nav-bar {
     font-size: 2rem;
     text-align: center;
   }
+
   .welcome-msg h2 {
     font-size: 1.6rem;
     text-align: center;
+    margin-bottom: -6rem;
   }
+
   .overall-details h1 {
     text-align: center;
     font-size: 1.4rem;
   }
+
   .overall-details h2 {
     text-align: center;
     font-size: 1.2rem;
   }
+
   .overall-details h3 {
     text-align: center;
     font-size: 1rem;
@@ -230,24 +243,24 @@ header .nav-bar {
 
   .back {
     margin-top: 1.6rem;
+    border-bottom: 2px solid #7f7fd5;
   }
 
   .compare-danceability {
     padding: 2rem;
     height: 50vh !important;
-    width: 90vw !important;
+    width: 100vw !important;
   }
 
   .compare-vocal {
     padding: 2rem;
     height: 50vh !important;
-    width: 90vw !important;
+    width: 100vw !important;
   }
 
   .compare-studio {
-    padding: 1rem;
-    height: 50vh !important;
-    width: 90vw !important;
+    height: 70vh !important;
+    width: 100vw !important;
     margin-bottom: 3rem;
   }
 
@@ -273,6 +286,11 @@ header .nav-bar {
     padding: 2rem;
     margin-top: 2rem !important;
     width: 80vw !important;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -333,7 +351,7 @@ header .nav-bar {
 .compare-danceability {
   position: relative;
   width: 88vw;
-  height: 70vh;
+  height: 80vh;
   padding: 3rem;
   box-shadow: 1px 1px 60px rgba(134, 134, 134, 0.822);
   border-radius: 12px;
@@ -342,7 +360,7 @@ header .nav-bar {
 .compare-vocal {
   position: relative;
   width: 88vw;
-  height: 70vh;
+  height: 80vh;
   padding: 3rem;
   box-shadow: 1px 1px 60px rgba(134, 134, 134, 0.822);
   border-radius: 12px;
@@ -354,7 +372,7 @@ header .nav-bar {
   width: 88vw;
   height: 95vh;
   box-shadow: 1px 1px 60px rgba(134, 134, 134, 0.822);
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 12px;
   margin-top: 1.5rem;
 }
@@ -368,8 +386,8 @@ header .nav-bar {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 }
 
 h5 {
@@ -402,4 +420,8 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.logout {
+  cursor: pointer;
 }

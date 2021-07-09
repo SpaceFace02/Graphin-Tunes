@@ -2,9 +2,10 @@
 
 import { allLabels } from "../../charts";
 import { individualChartData } from "../../charts";
+import { shortenedLabels } from "../../charts";
 
 const areaData = {
-  labels: allLabels,
+  labels: shortenedLabels,
   datasets: [
     {
       label: "Speechiness",
