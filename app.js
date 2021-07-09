@@ -26,7 +26,7 @@ app.use(
 
 app.use(
   expressSession({
-    secret: "secret-session",
+    secret: [process.env.SECRET_SESSION, "secret-session"],
     resave: false,
     saveUninitialized: false,
   })
