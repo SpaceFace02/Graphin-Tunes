@@ -32,11 +32,16 @@ html {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  transform: translateY(40%);
+  transform: translateY(23%);
+}
+
+.home-container h1 {
+  font-size: 3rem;
 }
 
 .description h2 {
   margin-top: 2rem;
+  font-size: 1.6rem;
 }
 
 .get-started {
@@ -392,7 +397,7 @@ header .nav-bar {
 
 h5 {
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
 }
 
 .website-link {
