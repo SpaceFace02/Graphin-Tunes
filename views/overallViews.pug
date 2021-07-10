@@ -21,13 +21,13 @@ block content
       .studio-chart 
         canvas(id="studioChart")
 
-    -const danceability = overallFeatures.danceability >= 0.5 ? "prefer" : "do not prefer"
+    -const danceability = overallFeatures.danceability >= 0.65 ? "prefer" : "do not prefer"
     -const speechiness = overallFeatures.speechiness >= 0.5 ? "love to" : "don't prefer to"
-    -const acousticness = overallFeatures.acousticness >= 0.5 ? "listen to" : "don't listen"
+    -const acousticness = overallFeatures.acousticness >= 0.65 ? "listen to" : "don't listen"
     -const liveness = overallFeatures.liveness >= 0.5 ? "enjoy" : "don't enjoy"
-    -const energy = overallFeatures.energy >= 0.5 ? "are absolutely thrilled to listen to songs with energy and pump!" : "prefer songs with lesser energy"
-    -const valence = overallFeatures.valence >= 0.5 ? "happy, euphoric and cheerful emotions!" : "sad and angry emotions"
-    -const instrumentalness = overallFeatures.instrumentalness >= 0.5 ? "a lot of pure instruments and less vocals" : "an emphasis on vocals being upfront and fewer instruments"
+    -const energy = overallFeatures.energy >= 0.7 ? "are absolutely thrilled to listen to songs with energy and pump!" : "prefer songs with lesser energy"
+    -const valence = overallFeatures.valence >= 0.65 ? "happy, euphoric and cheerful emotions!" : "sad and angry emotions"
+    -const instrumentalness = overallFeatures.instrumentalness >= 0.6 ? "a lot of pure instruments and less vocals" : "an emphasis on vocals being upfront and fewer instruments"
     -const tempo = overallFeatures.tempo <= 110 ? "slower, downbeat and more relaxed" : "faster, upbeat and high tempo"
     -const keyNames = ["C", "C♯/D♭", "D", "D♯/E♭", "E", "F", "F♯/G♭", "G", "G♯/A♭", "A", "A♯/B♭", "B"];
 
