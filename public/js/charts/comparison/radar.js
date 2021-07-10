@@ -18,11 +18,10 @@ const studioData = {
         individualChartData[5].acousticness,
         individualChartData[6].acousticness,
       ],
-      backgroundColor: [
-        randomColor({
-          hue: "pink",
-        }),
-      ],
+      backgroundColor: randomColor({
+        hue: "pink",
+      }),
+
       borderColor: randomColor({
         hue: "pink",
         luminosity: "light",
@@ -41,11 +40,10 @@ const studioData = {
         individualChartData[5].instrumentalness,
         individualChartData[6].instrumentalness,
       ],
-      backgroundColor: [
-        randomColor({
-          hue: "#c2ff85",
-        }),
-      ],
+      backgroundColor: randomColor({
+        hue: "#c2ff85",
+      }),
+
       borderColor: randomColor({
         hue: "#c2ff85",
         luminosity: "light",
@@ -64,7 +62,8 @@ export const studioConfig = {
       r: {
         pointLabels: {
           font: {
-            size: window.innerWidth < 600 ? 12 : 16,
+            size: window.innerWidth < 600 ? 12 : 17,
+            weight: "bold",
           },
           textAlign: "center",
         },

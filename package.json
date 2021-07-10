@@ -1,7 +1,7 @@
 {
-  "name": "music-matchers",
+  "name": "graphin-tunes",
   "version": "1.0.0",
-  "description": "Beautiful Visualizations of your listening data",
+  "description": "Beautiful Visualizations of your listening data!",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

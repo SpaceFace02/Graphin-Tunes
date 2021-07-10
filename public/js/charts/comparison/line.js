@@ -18,11 +18,10 @@ const lineData = {
         individualChartData[5].danceability,
         individualChartData[6].danceability,
       ],
-      backgroundColor: [
-        randomColor({
-          hue: "orange",
-        }),
-      ],
+      backgroundColor: randomColor({
+        hue: "orange",
+      }),
+
       borderColor: randomColor({
         hue: "orange",
         luminosity: "light",
@@ -41,11 +40,10 @@ const lineData = {
         individualChartData[5].valence,
         individualChartData[6].valence,
       ],
-      backgroundColor: [
-        randomColor({
-          hue: "purple",
-        }),
-      ],
+      backgroundColor: randomColor({
+        hue: "purple",
+      }),
+
       borderColor: randomColor({
         hue: "purple",
         luminosity: "light",
@@ -64,11 +62,10 @@ const lineData = {
         individualChartData[5].energy,
         individualChartData[6].energy,
       ],
-      backgroundColor: [
-        randomColor({
-          hue: "green",
-        }),
-      ],
+      backgroundColor: randomColor({
+        hue: "green",
+      }),
+
       borderColor: randomColor({
         hue: "green",
         luminosity: "light",

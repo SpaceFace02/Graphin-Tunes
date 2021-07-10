@@ -3,6 +3,7 @@
 import { allLabels } from "../../charts";
 import { individualChartData } from "../../charts";
 import { shortenedLabels } from "../../charts";
+import { onlyUnique } from "../../charts";
 
 const areaData = {
   labels: shortenedLabels,
@@ -18,11 +19,10 @@ const areaData = {
         individualChartData[5].speechiness,
         individualChartData[6].speechiness,
       ],
-      backgroundColor: [
-        randomColor({
-          hue: "blue",
-        }),
-      ],
+      backgroundColor: randomColor({
+        hue: "blue",
+      }),
+
       borderColor: randomColor({
         hue: "blue",
         luminosity: "light",
@@ -42,11 +42,10 @@ const areaData = {
         individualChartData[5].liveness,
         individualChartData[6].liveness,
       ],
-      backgroundColor: [
-        randomColor({
-          hue: "yellow",
-        }),
-      ],
+      backgroundColor: randomColor({
+        hue: "yellow",
+      }),
+
       borderColor: randomColor({
         hue: "yellow",
         luminosity: "light",

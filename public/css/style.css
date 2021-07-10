@@ -407,6 +407,11 @@ h5 {
   cursor: pointer;
 }
 
+#duplicatesMessage {
+  margin-top: 1rem;
+  color: rgb(255, 102, 0);
+}
+
 /* ERROR PAGE */
 .error {
   display: flex;

@@ -37,6 +37,7 @@ const modeFreq = (arr) => {
 
 export const major = modeFreq(individualChartData);
 
+// Handling Labels
 const allLabelsHandler = (array) => {
   let allLabels = [];
 
@@ -54,8 +55,24 @@ export const allLabels = allLabelsHandler(individualChartData);
 export let shortenedLabels = [];
 
 for (let i = 0; i < allLabels.length; i++) {
-  const individualLabels = allLabels[i].split(" ");
-  if (individualLabels.length > 2) {
-    shortenedLabels[i] = individualLabels;
-  }
+  const arrayLabels = allLabels[i].split(" ");
+  shortenedLabels[i] = arrayLabels;
 }
+
+// Handling Duplicates. https://stackoverflow.com/a/14438954/13830183
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+// Unique songs
+const unique = allLabels.filter(onlyUnique);
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (document.querySelector(".compare-heading")) {
+    if (unique.length < 3) {
+      const message =
+        "Please listen to more unique and different songs for a better analysis here!";
+      document.getElementById("duplicatesMessage").innerHTML = message;
+    }
+  }
+});

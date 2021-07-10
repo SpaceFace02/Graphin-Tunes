@@ -12,16 +12,15 @@ import "@babel/polyfill";
 const logoutLink = document.querySelector(".logout");
 
 if (logoutLink) {
-  logoutLink.addEventListener("click", () => {
+  logoutLink.addEventListener("click", (e) => {
     const url = "https://accounts.spotify.com/en/logout";
     const spotifyLogoutWindow = window.open(
       url,
       "Spotify Logout",
-      "width=700,height=500,top=40,left=40"
+      `width=700,height=500,top=40,left=40`
     );
-    setTimeout(() => spotifyLogoutWindow.close(), 2000);
-
     window.location.href = "/";
+    setTimeout(() => spotifyLogoutWindow.close(), 2000);
   });
 }
 
