@@ -43,13 +43,13 @@ None! Just head to the link at the top and log in to the Spotify Account and enj
 
 - If you don't have one account, head over to ***https://www.spotify.com/*** and create an account. Be sure to listen to a few different songs so that **Graphin' Tunes** can get the data to plot the graphs.
 
-\*\*\*IMPORTANT POINT - Be sure to listen to different songs of your liking and not repeat the same songs for a _much_ better experience! After all, you wouldn't like all the graphs to have the same values, would you? 😁
+- **_IMPORTANT POINT - Be sure to listen to different songs of your liking and not repeat the same songs for a *much* better experience! After all, you wouldn't like all the graphs to have the same values, would you?😁_**
 
-> If you want to see the code and play around with the code, just replace the process.env files with the specific values like YOUR spotify client_ID or YOUR secret client_ID etc.
+- If you want to see the code and play around with the code, just replace the process.env files with the specific values like YOUR spotify client_ID or YOUR secret client_ID etc.
 
-#### Just a note - Graphin Tunes asks for permission to access only 2 things:
+### Just a note - Graphin Tunes asks for permission to access only 2 things:
 
     - Your email and name - To display a welcome message when you log in😄
     - Your recently played songs - To get the data to plot the beautiful graphs.
 
-This application is a standalone project on its own and an idea I had for a long time, but it was also built as a final Project for CS50x, **Harvard's Course** for the _Intellectuals of Computer Science and the Art of Programming._
+This application is a standalone project on its own and an idea I had for a long time, but it was also built as a final Project for CS50x, **Harvard's Quintessential Course** for the _Intellectuals of Computer Science and the Art of Programming._
