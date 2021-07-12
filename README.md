@@ -4,7 +4,7 @@
 
 Graphin' Tunes is a web application that gives you various beautiful and colorful insights on your listening tastes and preferences in a beautiful interface. It plots minimal graphs which you can use to analyze the melodies and the characteristics of your recently played songs. The web application is best if viewed on a laptop or a desktop, but it is responsive for smaller devices as well.
 
-> The different features are danceability, valence, tempo, acousticness, speechiness, instrumentalness, liveness and mode(major or minor).
+> The different features are danceability, valence, tempo, acousticness, speechiness, instrumentalness, liveness and mode (major or minor).
 
 ### WEB ROUTES / PAGES
 
