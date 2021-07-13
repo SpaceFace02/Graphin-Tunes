@@ -1,6 +1,6 @@
 # GRAPHIN' TUNES
 
-> **WEBSITE! - https://graphin-tunes.herokuapp.com**
+> **WEBSITE!! - https://graphin-tunes.herokuapp.com**
 
 Graphin' Tunes is a web application that gives you various beautiful and colorful insights on your listening tastes and preferences in a beautiful interface. It plots minimal graphs which you can use to analyze the melodies and the characteristics of your recently played songs. The web application is best if viewed on a laptop or a desktop, but it is responsive for smaller devices as well.
 
@@ -33,20 +33,23 @@ Built using modern technologies like
 1. **NodeJS** - For the Back-end server-side code.
 2. **Spotify Authentication** - For getting the user data and authenticating the Spotify account.
 3. **ChartJS** - To plot the beautiful graphs on the website.
-4. Some helper libraries like:
+4. Some helper libraries/packages like:
    - **SpotifyWebApi** - A wrapper for Spotify Auth.
    - **Morgan** - For dev logging.
    - **DotENV** - For handling env files for holding sensitive information.
+   - **RandomColor** - For generating random attractive colors.
+   - **Parcel** - For bundling Front-End Javascript files.
+   - **Pug** - This is the template engine I used.
 
 ## REQUIREMENTS
 
-None! Just head to the link at the top and log in to the Spotify Account and enjoy the web app! That's it!
+**_None!!_** Just head to the link at the top and log in to the Spotify Account and enjoy the web app! That's it!
 
 - If you don't have one account, head over to ***https://www.spotify.com/*** and create an account. Be sure to listen to a few different songs so that **Graphin' Tunes** can get the data to plot the graphs.
 
 - **_IMPORTANT POINT - Be sure to listen to different songs of your liking and not repeat the same songs for a *much* better experience! After all, you wouldn't like all the graphs to have the same values, would you?_**
 
-- If you want to see the code and play around with the code, just replace the process.env files with the specific values like YOUR spotify client_ID or YOUR secret client_ID etc.
+- If you want to see the code and play around with the code, just replace the process.env files with the specific values like _YOUR_ spotify client*ID or \_YOUR* secret client_ID etc.
 
 ## Just a note - Graphin Tunes asks for permission to access only 2 things:
 
