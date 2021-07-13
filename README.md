@@ -55,5 +55,7 @@ Built using modern technologies like
 
     - Your email and name - To display a welcome message when you log in!
     - Your recently played songs - To get the data to plot the beautiful graphs.
+    
+### There is a small bug with heroku, the platform I used to deploy the website. The bug is that if you don't specify *_https_* protocol before the domain in the URL, the website is **NOT** redirected to https. Hence you might see the browser showing you that the website isn't secure, i.e showing only *_http_*. If you see that, please specify the https protocol manually, and the browser will show *SECURE* and work awesome.
 
 This application is a standalone project on its own and an idea I had for a long time, but it was also built as a final Project for CS50x, **Harvard's Quintessential Course** for the _Intellectuals of Computer Science and the Art of Programming._
