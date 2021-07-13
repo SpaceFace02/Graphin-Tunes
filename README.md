@@ -60,7 +60,7 @@ Deployed using **Heroku**
 
 - **Be sure to listen to different songs of your liking and not repeat the same songs for a _much_ better experience! After all, you wouldn't like all the graphs to have the same values, would you?**
 
-- **Note that the various audio features in this application are not 100% correct. These features have come from a machine learning model, trained with limited data( gigabytes of data, but in this data-centric world, this is quite less ). Hence if some songs have audio features that don't make sense, its solely due to the fact that machine learning, albiet powerful, is still in its baby steps and will take time and more data to evolve**
+- **Note that the various audio features in this application are not 100% correct. These features have come from a machine learning model, trained with limited data( gigabytes of data, but in this data-centric world, this is quite less ). Hence if some songs have audio features that don't make sense, its solely due to the fact that machine learning, albeit powerful, is still in its baby steps and will take time and more data to evolve**
 
 - **Note that the application might take 10-15 seconds to load up on the first load. This is because I am using a free account of heroku and have limited uptime hours. Hence the web-app sleeps after 1 hour of inactivity, but after the first short delay of the first load, the application works normally and well.**
 
