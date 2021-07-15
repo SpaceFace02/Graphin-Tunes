@@ -436,3 +436,8 @@ h5 {
 .logout {
   cursor: pointer;
 }
+
+.github_repo {
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
