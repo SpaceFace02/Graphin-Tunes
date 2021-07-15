@@ -102,7 +102,6 @@ module.exports.spotifyCallback = function (req, res, next) {
 
           songIds.push(songInfo.id);
           songArr.push(songInfo);
-          console.log(songInfo, songArr);
         });
 
         spotifyApi.getAudioFeaturesForTracks(songIds).then((features_data) => {

@@ -25,8 +25,6 @@ if (document.querySelector("#forData")) {
   );
 }
 
-console.log(individualChartData);
-
 // Looping through data and getting all features
 
 export const dataLoop = (data, type) => {
@@ -64,7 +62,6 @@ const allLabelsHandler = (array) => {
 
   for (let i = 0; i < iterateThru; i++) {
     const shortName = array[i].name.split("-")[0];
-    console.log(array[i]);
     allLabels.push(shortName);
   }
 
