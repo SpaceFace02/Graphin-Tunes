@@ -298,6 +298,10 @@ header .nav-bar {
     width: 60px;
     height: 60px;
   }
+
+  .github_repo {
+    margin-top: -3rem !important;
+  }
 }
 
 .overall-polar {
@@ -440,4 +444,5 @@ h5 {
 .github_repo {
   margin-top: 2.5rem;
   margin-bottom: -1rem;
+  text-decoration: none;
 }

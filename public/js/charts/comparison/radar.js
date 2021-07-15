@@ -22,6 +22,7 @@ const studioData = {
         format: "rgba",
         alpha: 0.6,
       }),
+      fill: true,
     },
     {
       label: "Instrumentalness",
@@ -36,6 +37,7 @@ const studioData = {
         format: "rgba",
         alpha: 0.6,
       }),
+      fill: true,
     },
   ],
 };
