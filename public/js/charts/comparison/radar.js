@@ -3,8 +3,21 @@
 import { individualChartData, allLabels, dataLoop } from "../../charts";
 import { shortenedLabels } from "../../charts";
 
-const data_acousticness = dataLoop(individualChartData, "acousticness");
-const data_instrumentalness = dataLoop(individualChartData, "instrumentalness");
+const labelLength = allLabels.length;
+
+const data_acousticness_total = dataLoop(individualChartData, "acousticness");
+const data_instrumentalness_total = dataLoop(
+  individualChartData,
+  "instrumentalness"
+);
+
+const data_acousticness = [];
+const data_instrumentalness = [];
+
+for (let i = 0; i < labelLength; i++) {
+  data_acousticness.push(data_acousticness_total[i]);
+  data_instrumentalness.push(data_instrumentalness_total[i]);
+}
 
 const studioData = {
   labels: allLabels,
