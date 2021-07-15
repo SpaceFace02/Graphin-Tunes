@@ -266,6 +266,7 @@ header .nav-bar {
   .compare-studio {
     height: 70vh !important;
     width: 100vw !important;
+    transform: translateX(5%);
     margin-bottom: 3rem;
   }
 

@@ -1,24 +1,17 @@
 /* eslint-disable */
 
 import { allLabels } from "../../charts";
-import { individualChartData } from "../../charts";
-import { shortenedLabels } from "../../charts";
-import { onlyUnique } from "../../charts";
+import { shortenedLabels, individualChartData, dataLoop } from "../../charts";
+
+const data_speechiness = dataLoop(individualChartData, "speechiness");
+const data_liveness = dataLoop(individualChartData, "liveness");
 
 const areaData = {
   labels: shortenedLabels,
   datasets: [
     {
       label: "Speechiness",
-      data: [
-        individualChartData[0].speechiness,
-        individualChartData[1].speechiness,
-        individualChartData[2].speechiness,
-        individualChartData[3].speechiness,
-        individualChartData[4].speechiness,
-        individualChartData[5].speechiness,
-        individualChartData[6].speechiness,
-      ],
+      data: data_speechiness,
       backgroundColor: randomColor({
         hue: "blue",
       }),
@@ -33,15 +26,7 @@ const areaData = {
     },
     {
       label: "Liveness",
-      data: [
-        individualChartData[0].liveness,
-        individualChartData[1].liveness,
-        individualChartData[2].liveness,
-        individualChartData[3].liveness,
-        individualChartData[4].liveness,
-        individualChartData[5].liveness,
-        individualChartData[6].liveness,
-      ],
+      data: data_liveness,
       backgroundColor: randomColor({
         hue: "yellow",
       }),

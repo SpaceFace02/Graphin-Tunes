@@ -25,6 +25,19 @@ if (document.querySelector("#forData")) {
   );
 }
 
+console.log(individualChartData);
+
+// Looping through data and getting all features
+
+export const dataLoop = (data, type) => {
+  const data_loop = [];
+  data.forEach((el) => {
+    data_loop.push(el[type]);
+  });
+
+  return data_loop;
+};
+
 // Mode( Major or Minor Scale )
 
 const modeFreq = (arr) => {
@@ -41,8 +54,17 @@ export const major = modeFreq(individualChartData);
 const allLabelsHandler = (array) => {
   let allLabels = [];
 
-  for (let i = 0; i < 7; i++) {
+  // To prevent overcrowding of labels.
+  let iterateThru;
+  if (array.length >= 7) {
+    iterateThru = 7;
+  } else {
+    iterateThru = array.length;
+  }
+
+  for (let i = 0; i < iterateThru; i++) {
     const shortName = array[i].name.split("-")[0];
+    console.log(array[i]);
     allLabels.push(shortName);
   }
 
@@ -60,7 +82,7 @@ for (let i = 0; i < allLabels.length; i++) {
 }
 
 // Handling Duplicates. https://stackoverflow.com/a/14438954/13830183
-function onlyUnique(value, index, self) {
+export function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 

@@ -50,17 +50,28 @@ app.use((req, res, next) => {
 /////// GLOBAL ERROR HANDLING ////////////////
 // error handler
 app.use((err, req, res, next) => {
-  const message =
-    process.env.NODE_ENV === "development"
-      ? err.message
-      : "Please refresh or login again!";
+  if (!err.message) {
+    err.message =
+      process.env.NODE_ENV === "development"
+        ? err.message
+        : "Please refresh or login again!";
+  }
 
   // Production
   const errProd = new Error("Something went wrong");
   res.locals.error = process.env.NODE_ENV === "development" ? err : errProd;
+  const { message } = err;
+  console.log(err);
 
   // render the error page
   res.status(err.status || 500);
+
+  if (
+    err.message ===
+    "Data is not found!! Please listen to some music or turn off private mode in Settings!"
+  ) {
+    return res.redirect("/dataErr");
+  }
   res.render("error", {
     message,
   });

@@ -69,9 +69,9 @@ const spotifyApi = new SpotifyWebApi({
 module.exports.spotifyCallback = function (req, res, next) {
   spotifyApi
     .authorizationCodeGrant(req.query.code)
-    .then((data) => {
-      spotifyApi.setAccessToken(data.body.access_token);
-      spotifyApi.setRefreshToken(data.body.refresh_token);
+    .then((token_data) => {
+      spotifyApi.setAccessToken(token_data.body.access_token);
+      spotifyApi.setRefreshToken(token_data.body.refresh_token);
       spotifyApi.getMe().then((userdata) => {
         const userData = {
           name: userdata.body.display_name,
@@ -80,11 +80,18 @@ module.exports.spotifyCallback = function (req, res, next) {
         req.session.user = userData;
       });
     })
-    .then((data) => {
-      spotifyApi.getMyRecentlyPlayedTracks({ limit: 10 }).then((data) => {
+    .then(() => {
+      spotifyApi.getMyRecentlyPlayedTracks({ limit: 10 }).then((song_data) => {
+        if (song_data.body.items.length === 0) {
+          return next(
+            new Error(
+              "Data is not found!! Please listen to some music or turn off private mode in Settings!"
+            )
+          );
+        }
         const songArr = [];
         const songIds = [];
-        data.body.items.forEach((el) => {
+        song_data.body.items.forEach((el) => {
           const songInfo = {
             id: el.track.id,
             name: el.track.name,
@@ -95,11 +102,12 @@ module.exports.spotifyCallback = function (req, res, next) {
 
           songIds.push(songInfo.id);
           songArr.push(songInfo);
+          console.log(songInfo, songArr);
         });
 
-        spotifyApi.getAudioFeaturesForTracks(songIds).then((data) => {
+        spotifyApi.getAudioFeaturesForTracks(songIds).then((features_data) => {
           // OVERALL
-          const individualFeatures = data.body.audio_features;
+          const individualFeatures = features_data.body.audio_features;
           individualFeatures.forEach((el, i) => {
             el.name = songArr[i].name;
             el.artists = songArr[i].artists[0].name;

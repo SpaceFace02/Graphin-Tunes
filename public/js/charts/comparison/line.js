@@ -1,23 +1,22 @@
 /* eslint-disable */
 
-import { allLabels } from "../../charts";
-import { individualChartData } from "../../charts";
-import { shortenedLabels } from "../../charts";
+import {
+  individualChartData,
+  shortenedLabels,
+  allLabels,
+  dataLoop,
+} from "../../charts";
+
+const data_danceability = dataLoop(individualChartData, "danceability");
+const data_valence = dataLoop(individualChartData, "valence");
+const data_energy = dataLoop(individualChartData, "energy");
 
 const lineData = {
   labels: shortenedLabels,
   datasets: [
     {
       label: "Danceability",
-      data: [
-        individualChartData[0].danceability,
-        individualChartData[1].danceability,
-        individualChartData[2].danceability,
-        individualChartData[3].danceability,
-        individualChartData[4].danceability,
-        individualChartData[5].danceability,
-        individualChartData[6].danceability,
-      ],
+      data: data_danceability,
       backgroundColor: randomColor({
         hue: "orange",
       }),
@@ -31,15 +30,7 @@ const lineData = {
     },
     {
       label: "Valence",
-      data: [
-        individualChartData[0].valence,
-        individualChartData[1].valence,
-        individualChartData[2].valence,
-        individualChartData[3].valence,
-        individualChartData[4].valence,
-        individualChartData[5].valence,
-        individualChartData[6].valence,
-      ],
+      data: data_valence,
       backgroundColor: randomColor({
         hue: "purple",
       }),
@@ -53,15 +44,7 @@ const lineData = {
     },
     {
       label: "Energy",
-      data: [
-        individualChartData[0].energy,
-        individualChartData[1].energy,
-        individualChartData[2].energy,
-        individualChartData[3].energy,
-        individualChartData[4].energy,
-        individualChartData[5].energy,
-        individualChartData[6].energy,
-      ],
+      data: data_energy,
       backgroundColor: randomColor({
         hue: "green",
       }),

@@ -1,23 +1,17 @@
 /* eslint-disable */
 
-import { allLabels } from "../../charts";
-import { individualChartData } from "../../charts";
+import { individualChartData, allLabels, dataLoop } from "../../charts";
 import { shortenedLabels } from "../../charts";
+
+const data_acousticness = dataLoop(individualChartData, "acousticness");
+const data_instrumentalness = dataLoop(individualChartData, "instrumentalness");
 
 const studioData = {
   labels: allLabels,
   datasets: [
     {
       label: "Acousticness",
-      data: [
-        individualChartData[0].acousticness,
-        individualChartData[1].acousticness,
-        individualChartData[2].acousticness,
-        individualChartData[3].acousticness,
-        individualChartData[4].acousticness,
-        individualChartData[5].acousticness,
-        individualChartData[6].acousticness,
-      ],
+      data: data_acousticness,
       backgroundColor: randomColor({
         hue: "pink",
       }),
@@ -31,15 +25,7 @@ const studioData = {
     },
     {
       label: "Instrumentalness",
-      data: [
-        individualChartData[0].instrumentalness,
-        individualChartData[1].instrumentalness,
-        individualChartData[2].instrumentalness,
-        individualChartData[3].instrumentalness,
-        individualChartData[4].instrumentalness,
-        individualChartData[5].instrumentalness,
-        individualChartData[6].instrumentalness,
-      ],
+      data: data_instrumentalness,
       backgroundColor: randomColor({
         hue: "#c2ff85",
       }),

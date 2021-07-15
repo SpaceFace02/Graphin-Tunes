@@ -19,4 +19,6 @@ router.get("/visualize", viewController.visualize);
 
 router.get("/compare", viewController.compare);
 
+router.get("/dataErr", viewController.dataErr);
+
 module.exports = router;

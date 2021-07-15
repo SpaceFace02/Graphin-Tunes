@@ -21,3 +21,12 @@ exports.compare = (req, res, next) => {
     overallFeatures,
   });
 };
+
+exports.dataErr = (req, res, next) => {
+  const dataMessage =
+    "Data is not found!! Please listen to some music or turn off private mode in Settings!";
+
+  res.render("error", {
+    message: dataMessage,
+  });
+};
