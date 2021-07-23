@@ -13,7 +13,7 @@ There are 2 main routes or pages:
 1. **Overview**
    - This page shows you the overall characteristics of your songs in a dash-board like interface by graphing various charts. It provides a top view of your type of music, with a indepth written explanation below.
 2. **Comparison**
-   - This page looks amazing and may really up your experience on your website. It is best viewed on a wide screen, preferably desktop or laptop. It provides an side-to-side comparison of your recently played songs, so you can see for yourself how the features add up and correlate. It shows
+   - This page looks exciting and may really up your experience on this website. It is best viewed on a wide screen, preferably desktop or laptop. It provides an side-to-side comparison of your recently played songs, so you can see for yourself how the features add up and correlate. It shows
 
 ## An indepth understanding of the various audio features
 
