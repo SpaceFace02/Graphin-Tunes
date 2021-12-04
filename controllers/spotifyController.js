@@ -81,7 +81,7 @@ module.exports.spotifyCallback = function (req, res, next) {
       });
     })
     .then(() => {
-      spotifyApi.getMyRecentlyPlayedTracks({ limit: zz }).then((song_data) => {
+      spotifyApi.getMyRecentlyPlayedTracks({ limit: 10 }).then((song_data) => {
         if (song_data.body.items.length === 0) {
           return next(
             new Error(
