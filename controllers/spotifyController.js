@@ -81,8 +81,9 @@ module.exports.spotifyCallback = function (req, res, next) {
       });
     })
     .then(() => {
-      spotifyApi.getMyRecentlyPlayedTracks({ limit: 10 }).then((song_data) => {
-        if (song_data.body.items.length === 0) {
+      spotifyApi.getMyRecentlyPlayedTracks({ limit: 20 }).then((song_data) => {
+        const unique_song_data = [...Set(song_data)];
+        if (unique_song_data.body.items.length === 0) {
           return next(
             new Error(
               "Data is not found!! Please listen to some music or turn off private mode in Settings!"
@@ -91,7 +92,7 @@ module.exports.spotifyCallback = function (req, res, next) {
         }
         const songArr = [];
         const songIds = [];
-        song_data.body.items.forEach((el) => {
+        unique_song_data.body.items.forEach((el) => {
           const songInfo = {
             id: el.track.id,
             name: el.track.name,
