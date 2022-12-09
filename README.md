@@ -1,6 +1,7 @@
 # GRAPHIN' TUNES
 
-> **WEBSITE!! - https://graphin-tunes.herokuapp.com**
+> **WEBSITE!! - https://graphin-tunes.onrender.com**
+> **ALTERNATE LINK - https://graphin-tunes.cyclic.app/** - no wait time, but slightly buggy.
 
 Graphin' Tunes is a web application that gives you various **interactive** beautiful and colorful insights on your listening tastes and preferences in a beautiful interface. It plots minimal graphs which you can use to analyze the melodies and the characteristics of your recently played songs. The web application is best if viewed on a laptop or a desktop, but it is responsive for smaller devices as well.
 
@@ -41,7 +42,7 @@ Built using modern technologies like:
    - **Parcel** - For bundling Front-End Javascript files.
    - **Pug** - This is the template engine I used.
 
-Deployed using **Heroku**
+Deployed using **OnRender**
 
 ## REQUIREMENTS
 
@@ -62,7 +63,7 @@ Deployed using **Heroku**
 
 - **Note that the various audio features in this application are not 100% correct. These features have come from a machine learning model, trained with limited data( gigabytes of data, but in this data-centric world, this is quite less ). Hence if some songs have audio features that don't make sense, its solely due to the fact that machine learning, albeit powerful, is still in its baby steps and will take time and more data to evolve**
 
-- **Note that the application might take 10-15 seconds to load up on the first load. This is because I am using a free account of heroku and have limited uptime hours. Hence the web-app sleeps after 1 hour of inactivity, but after the first short delay of the first load, the application works normally and well.**
+- **Note that the application might take 10-15 seconds to load up on the first load. This is because I am using a free account of Render and have limited uptime hours. Hence the web-app sleeps after 1 hour of inactivity, but after the first short delay of the first load, the application works normally and well.**
 
 - **The graphs are fully interactable, you can click on labels to disable them, enable them and they also adjust according to your screen size and zoom level**
 
