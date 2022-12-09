@@ -1,4 +1,3 @@
-const dotenv = require("dotenv");
 const cors = require("cors");
 const compression = require("compression");
 const expressSession = require("express-session");
@@ -7,9 +6,9 @@ const path = require("path");
 const morgan = require("morgan");
 const spotifyRouter = require("./routes/spotifyRoutes");
 
-dotenv.config({ path: "./config.env" });
-
 const app = express();
+
+require("dotenv").config();
 
 // view Engine
 app.set("view engine", "pug");
@@ -52,13 +51,12 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
   if (!err.message) {
     err.message =
-      process.env.NODE_ENV === "development"
-        ? err.message
-        : "Please refresh or login again!";
+      process.env.NODE_ENV === "development" ? err.message : "Please refresh or login again!";
   }
 
   // Production
   const errProd = new Error("Something went wrong");
+  // Makes sure the error message is accessible in the PUG template.
   res.locals.error = process.env.NODE_ENV === "development" ? err : errProd;
   const { message } = err;
   console.log(err);

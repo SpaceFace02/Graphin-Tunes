@@ -56,11 +56,9 @@ html {
 }
 
 .get-started:hover {
-  background: #7f7fd5 url("../img/pixel.png");
+  background: #6868ff;
   color: white;
-  border: 0.1px solid rgba(92, 92, 92, 0.4);
-  transition-delay: 0.3s;
-  animation: animate 0.3s steps(8) forwards;
+  transition: 0.5s;
 }
 
 @keyframes animate {

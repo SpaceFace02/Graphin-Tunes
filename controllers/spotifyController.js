@@ -1,27 +1,23 @@
 const querystring = require("querystring");
 const SpotifyWebApi = require("spotify-web-api-node");
 
+// ENV
+require("dotenv").config();
+
 const client_id = process.env.CLIENT_ID; // Your client id
 const client_secret = process.env.CLIENT_SECRET; // Your secret
-const redirect_uri = process.env.REDIRECT_URI_PROD; // Your redirect uri
+const redirect_uri = process.env.REDIRECT_URI; // Your redirect uri
 
-/**
- * Generates a random string containing numbers and letters
- * @param  {number} length The length of the string
- * @return {string} The generated string
- */
+// Generates a random string.
 const generateRandomString = function (length) {
   let text = "";
-  const possible =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
   for (let i = 0; i < length; i++) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
 };
-
-// https://stackoverflow.com/q/1053843
 
 const findMostFreqKey = (array) => {
   if (array.length === 0) return null;
@@ -39,6 +35,8 @@ const findMostFreqKey = (array) => {
   }
   return maxEl;
 };
+
+const getRoundedFigure = (num) => Math.round(num * 100) / 100;
 
 const stateKey = "spotify_auth_state";
 
@@ -142,27 +140,17 @@ module.exports.spotifyCallback = function (req, res, next) {
           });
 
           const overallFeatures = {
-            danceability:
-              Math.round((danceability / individualFeatures.length) * 100) /
-              100,
+            danceability: Math.round((danceability / individualFeatures.length) * 100) / 100,
             // Find max occurence of the key to find most played chord.
             key: findMostFreqKey(key),
-            energy:
-              Math.round((energy / individualFeatures.length) * 100) / 100,
-            tempo: Math.round((tempo / individualFeatures.length) * 100) / 100,
-            valence:
-              Math.round((valence / individualFeatures.length) * 100) / 100,
-            acousticness:
-              Math.round((acousticness / individualFeatures.length) * 100) /
-              100,
-            mode: Math.round(mode / individualFeatures.length),
-            liveness:
-              Math.round((liveness / individualFeatures.length) * 100) / 100,
-            speechiness:
-              Math.round((speechiness / individualFeatures.length) * 100) / 100,
-            instrumentalness:
-              Math.round((instrumentalness / individualFeatures.length) * 100) /
-              100,
+            energy: getRoundedFigure(energy / individualFeatures.length),
+            tempo: getRoundedFigure(tempo / individualFeatures.length),
+            valence: getRoundedFigure(valence / individualFeatures.length),
+            acousticness: getRoundedFigure(acousticness / individualFeatures.length),
+            mode: getRoundedFigure(mode / individualFeatures.length),
+            liveness: getRoundedFigure(liveness / individualFeatures.length),
+            speechiness: getRoundedFigure(speechiness / individualFeatures.length),
+            instrumentalness: getRoundedFigure(instrumentalness / individualFeatures.length),
           };
           // Re-usable request sessions
           req.session.overallFeatures = overallFeatures;

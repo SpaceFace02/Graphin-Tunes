@@ -34,10 +34,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
-    "parcel-bundler": "^1.12.5",
     "prettier": "^2.3.2"
   },
   "engines": {
-    "node": "^14.0.0"
+    "node": "^16.0.0"
   }
 }
