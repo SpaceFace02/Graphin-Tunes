@@ -1,7 +1,7 @@
 # GRAPHIN' TUNES
 
-> **WEBSITE!! - https://graphin-tunes.onrender.com**
-> **ALTERNATE LINK - https://graphin-tunes.cyclic.app/** - no wait time, but slightly buggy.
+> **WEBSITE!! - https://graphin-tunes.onrender.com**.
+ **ALTERNATE LINK - https://graphin-tunes.cyclic.app/** - no wait time, but slightly buggy.
 
 Graphin' Tunes is a web application that gives you various **interactive** beautiful and colorful insights on your listening tastes and preferences in a beautiful interface. It plots minimal graphs which you can use to analyze the melodies and the characteristics of your recently played songs. The web application is best if viewed on a laptop or a desktop, but it is responsive for smaller devices as well.
 
