@@ -8,8 +8,8 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "start:prod": "(SET NODE_ENV=production) & nodemon app.js",
-    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js ",
-    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js "
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
   "author": "Chirag Rao",
   "license": "ISC",
