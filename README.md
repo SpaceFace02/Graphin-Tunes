@@ -1,6 +1,6 @@
 # GRAPHIN' TUNES
 
-> **WEBSITE!! - https://graphin-tunes.onrender.com**.
+> **WEBSITE!! - https://graphin-tunes.onrender.com**. - Slight wait time of 15 secons, as I'm in free tier.
 
  **ALTERNATE LINK - https://graphin-tunes.cyclic.app/** - no wait time, but slightly buggy.
 
