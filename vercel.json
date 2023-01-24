@@ -1,15 +1,16 @@
 {
   "version": 2,
+  "name": "graphintunes",
   "builds": [
     {
-      "src": "./app.js",
+      "src": "app.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/app.js"
     }
   ]
 }
