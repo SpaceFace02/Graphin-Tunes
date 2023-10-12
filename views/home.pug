@@ -7,6 +7,19 @@ block content
       h2 Get <span class="name">Interactive</span> Beautiful Insights on what you listen ( On Spotify )!
 
     a.get-started(href="/login") GET STARTED
+    button.dark-mode-button(onclick="toggleDarkMode()") Dark Mode
+    script.
+      function toggleDarkMode() {
+        var body = document.body;
+        var button = document.querySelector('.dark-mode-button');
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          button.classList.remove('get-started-dark-mode');
+        } else {
+          body.classList.add('dark-mode');
+          button.classList.add('get-started-dark-mode');
+        }
+      }
 
     h5 P.S. If the graphs are a bit messed up in size or are blurred, please <span class="name">refresh</span> the page and <span class="name">adjust the browser zoom level.</span>
 
