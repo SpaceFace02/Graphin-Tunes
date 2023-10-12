@@ -16,6 +16,11 @@
   max-width: 100rem;
 }
 
+.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
 h6 {
   font-size: 1rem;
 }
@@ -59,6 +64,11 @@ html {
   background: #6868ff;
   color: white;
   transition: 0.5s;
+}
+
+.get-started-dark-mode {
+  background-color: #f5f5f5;
+  color: #121212;
 }
 
 @keyframes animate {
